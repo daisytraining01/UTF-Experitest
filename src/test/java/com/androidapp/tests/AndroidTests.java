@@ -27,7 +27,8 @@ public class AndroidTests extends BaseTest {
     @BeforeMethod(alwaysRun = true)
     private void testbeforeMethod() {
     	System.out.println("My Test Before Method");
-    	driverFactory.createRemoteDriverUpdated();   	
+    	driverFactory.createRemoteDriverUpdated(); 
+    	
     }
 
     @Test(enabled = true, groups = {"android"})

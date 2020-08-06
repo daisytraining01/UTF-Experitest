@@ -1,0 +1,200 @@
+<html>
+ <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style type="text/css">.row{margin-right:0px; margin-left:0px;} .skills{text-align:center;padding-right:20px;line-height:40px;color:white;margin-bottom:2px}.passed{background-color:green}.failed{background-color:#f44336}.skipped{background-color:#808080}.testName{background-color:#406084}.total{background-color:#a7856b}.executionTime{background-color:#e59866}.padding-logs{padding:1cm}body{padding:0;font:14px "Calibri",Lucida Grande;line-height:1.5}.checkbox{padding-left:0;margin-top:-5px}.checkbox label{display:inline-block;position:relative;padding-left:5px}.checkbox label::before{content:"";display:inline-block;position:absolute;width:17px;height:17px;left:0;margin-left:-20px;border:1px solid #7f7fff;border-radius:3px;background-color:#fff;-webkit-transition:border .15s ease-in-out,color .15s ease-in-out;-o-transition:border .15s ease-in-out,color .15s ease-in-out;transition:border .15s ease-in-out,color .15s ease-in-out}.checkbox label::after{display:inline-block;position:absolute;width:16px;height:16px;left:0;top:0;margin-left:-10px;padding-left:3px;padding-top:1px;font-size:11px;color:#555}.checkbox input[type="checkbox"]{opacity:0}.checkbox input[type="checkbox"]:focus+label::before{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}.checkbox input[type="checkbox"]:checked+label::after{font-family:"FontAwesome";content:"\f00c";margin-left:-20px}.checkbox input[type="checkbox"]:disabled+label{opacity:.65}.checkbox input[type="checkbox"]:disabled+label::before{background-color:#eee;cursor:not-allowed}.checkbox.checkbox-circle+label::before{border-radius:50%}.checkbox.checkbox-inline{margin-top:0}.checkbox-primary input[type="checkbox"]:checked+label::before{background-color:#428bca;border-color:#428bca}.checkbox-primary input[type="checkbox"]:checked+label::after{color:#fff}.checkbox-danger input[type="checkbox"]:checked+label::before{background-color:#d9534f;border-color:#d9534f}.checkbox-danger input[type="checkbox"]:checked+label::after{color:#fff}.checkbox-info input[type="checkbox"]:checked+label::before{background-color:#5bc0de;border-color:#5bc0de}.checkbox-info input[type="checkbox"]:checked+label::after{color:#fff}.checkbox-warning input[type="checkbox"]:checked+label::before{background-color:#f0ad4e;border-color:#f0ad4e}.checkbox-warning input[type="checkbox"]:checked+label::after{color:#fff}.checkbox-success input[type="checkbox"]:checked+label::before{background-color:#5cb85c;border-color:#5cb85c}.checkbox-success input[type="checkbox"]:checked+label::after{color:#fff}.box{color:black;padding:4px;margin-top:4px;border-bottom:1px double;border-top:1px double;border-left: 1px double;border-right: 1px double;border-color:gray}a{font-color:blue}.red{background:#ffb699}.green{background:#90ee90}.yellow{background:#ff6}.blue{background:#f0e68c}#mainTable{border-collapse:collapse}*{font-family:Tahoma,Calibri Light!important}</style> 
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+ </head>
+ <body background="screenshots/Background.png">
+  <script language="javascript"> function toggle(id,id2) {      var ele = document.getElementById(id);      var text = document.getElementById(id2);      if(ele.style.display == "block") {            ele.style.display = "none";            text.innerHTML = "[+]";      }      else {            ele.style.display = "block";            text.innerHTML = "[-]";      }}</script>
+  <script type="text/javascript">$('#fails').show();$('#pass').show();$('#skip').show();$(document).ready(function(){$("input:checkbox").change(function() {$.each($('input[type="checkbox"]'), function (key, value) {var inputValue = $(this).attr("value");var ischecked= $(this).is(':checked');if(ischecked){$("." + inputValue).show();}else{$("." + inputValue).hide();}});});});</script>
+  <meta charset="utf-8">
+  <title>Automation Report</title>
+  <style type="text/css">body{margin:5px;} .box{color: black; padding: 4px; margin-top: 4px;  border-bottom: 1px double;  border-top: 1px double; border-color:gray;}.red{ background: #ffb699; }.green{ background: #90EE90; }.yellow{ background: #FFFF66; }.blue{ background: #F0E68C; }#mainTable {border-collapse: collapse;}* {font-family: Tahoma, Calibri Light !important;}</style>
+  <div class="\&quot;row\&quot;">
+   <table border="0" style="width:100%">
+    <tbody>
+     <tr>
+      <td>
+       <table>
+        <tbody>
+         <tr>
+          <td align="left" width="10%"><img style="margin:5px;" src="screenshots/MavericLogo.png" border="2">&nbsp;</td>
+         </tr>
+        </tbody>
+       </table></td>
+      <td align="center"><b>
+        <left>
+         <font style="font-size: 25px;"> Test Application Automation Results </font>
+        </left></b></td>
+      <td>
+       <div name="jenkin_compiler_name" align="right">
+        <table style="background-color:rgba(0, 0, 0, 0);">
+         <tbody>
+          <tr>
+           <td><b>
+             <div id="runCompletedOn" class="label label-danger">
+              Tue Aug 04 19:55:39 IST 2020
+             </div><b></b></b></td>
+          </tr>
+         </tbody>
+        </table>
+       </div></td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  <div class="row">
+   <div class="col-xs-3 skills testName ">
+    Environment : <span id="environment">TestNG Suite</span>
+   </div>
+   <div class="col-xs-3 skills total ">
+    Total Test Cases : <span id="totalTestCases">1</span>
+   </div>
+   <div class="col-xs-3 skills passed">
+    Execution Time :<span id="executionTime">00:01:30</span>
+   </div>
+   <div class="col-xs-3 skills executionTime">
+    Browser : <span id="browser">chrome</span>
+   </div>
+   <div class="col-xs-3 skills passed">
+    Passed Test Cases : <span id="passedCount">0</span>
+   </div>
+   <div class="col-xs-3 skills failed">
+    Failed Test Cases :<span id="failedCount">1</span>
+   </div>
+   <div class="col-xs-3 skills testName">
+    Retry Count : 0<span id="retryCount"></span>
+   </div>
+   <div class="col-xs-3 skills total">
+    Groups : <span id="keywords">@web</span>
+   </div>
+  </div>
+  <br>
+  <div class="row">
+   <h4 class="col-xs-12 col-sm-6 pull-left"><b><font color="#24468D">Report Details</font></b></h4>
+   <div class="col-xs-12 col-sm-6">
+    <div style="margin-left: 50%;">
+     <div class="col-xs-4 col-sm-offset-3 col-sm-3 checkbox checkbox-success">
+      <input type="checkbox" id="pass" value="green" name="checkbox" checked><label for="pass">Passed</label>
+     </div>
+     <div class="col-xs-4 col-sm-3 checkbox checkbox-danger">
+      <input type="checkbox" id="fails" value="red" name="checkbox" checked><label for="fails">Failed</label>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div id="pass" class="blue box padding-logs">
+   Feature : Demo Bank Feature using UTAF Report&nbsp;<a style="font-size:13px;vertical-align:2px;" id="Demo Bank Feature using UTAF Report_passed_0" href="javascript:toggle('Demo Bank Feature using UTAF Report_passed','Demo Bank Feature using UTAF Report_passed_0');"> [+]</a><a style="position: absolute;right: 9;color:black;"> Total Scenarios : 2, Passed Scenarios : 0, Failed Scenarios : 2</a>
+   <div id="Demo Bank Feature using UTAF Report_passed" style="display: none; background-color: #F0E68C; margin-left: 0.5cm; ">
+    <div class="messages">
+     <div id="fail" class="red box padding-logs">
+      Scenario : TC001_Transfer the Salary amount to the Employee Account&nbsp;<a style="font-size:13px;vertical-align:2px;" id="TC001_Transfer the Salary amount to the Employee Account_failed_11955396458" href="javascript:toggle('TC001_Transfer the Salary amount to the Employee Account_failed_1955396458','TC001_Transfer the Salary amount to the Employee Account_failed_11955396458');"> [+]</a>
+      <div id="TC001_Transfer the Salary amount to the Employee Account_failed_1955396458" style="display: none; background-color: rgb(255, 218, 204); margin-left: 0.5cm;">
+       <div class="messages">
+        <div id="fail" class="red box padding-logs">
+         Given Access the URL in the "desktop-web"<a style="font-size:13px;vertical-align:2px;" id="step11_failed_01955396441" href="javascript:toggle('step11_failed1955396441','step11_failed_01955396441');"> [+]</a>
+         <div id="step11_failed1955396441" style="display: none; background-color: rgb(255, 218, 204);; margin-left: 0.5cm; ">
+          <div class="messages">
+           java.lang.AssertionError: A detailed report will be created at 'D:\workspace\UnifiedFramework5\UnifiedFramework_RecheckWeb\target\test-classes\retest\recheck\com.maveric.core.cucumber.CucumberBaseTest.report'. You can review the details by using our CLI (https://github.com/retest/recheck.cli/) or GUI (https://retest.de/review/). 1 check(s) in 'com.maveric.core.cucumber.CucumberBaseTest' found the following difference(s): Test 'scenario' has 19 difference(s) in 1 state(s): initial resulted in: html (Digital Bank) at 'html[1]': outline: expected="java.awt.Rectangle[x=0,y=0,width=412,height=524]", actual="java.awt.Rectangle[x=0,y=0,width=1034,height=492]" body (body) at 'html[1]/body[1]': display: expected="(default or absent)", actual="table" div (div) at 'html[1]/body[1]/div[2]': outline: expected="java.awt.Rectangle[x=0,y=524,width=0,height=-524]", actual="java.awt.Rectangle[x=0,y=492,width=0,height=-492]" div (div-2) at 'html[1]/body[1]/div[1]/div[1]': outline: expected="java.awt.Rectangle[x=0,y=0,width=0,height=0]", actual="java.awt.Rectangle[x=37,y=0,width=-74,height=0]" margin-left: expected="(default or absent)", actual="37px" margin-right: expected="(default or absent)", actual="37px" max-width: expected="(default or absent)", actual="960px" div (div-3) at 'html[1]/body[1]/div[1]/div[1]/div[1]': outline: expected="java.awt.Rectangle[x=15,y=62,width=-30,height=-124]", actual="java.awt.Rectangle[x=210,y=46,width=-420,height=-91]" margin-bottom: expected="61.9276px", actual="45.76px" margin-top: expected="61.9276px", actual="45.76px" margin-left: expected="(default or absent)", actual="195px" margin-right: expected="(default or absent)", actual="195px" label (label) at 'html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/form[1]/div[2]/label[1]': outline: expected="java.awt.Rectangle[x=0,y=0,width=-237,height=-46]", actual="java.awt.Rectangle[x=0,y=0,width=-391,height=-46]" label (label-1) at 'html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/form[1]/div[3]/label[1]': outline: expected="java.awt.Rectangle[x=0,y=0,width=-198,height=-8]", actual="java.awt.Rectangle[x=0,y=0,width=-358,height=-8]" textnode (remember_me) at 'html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/form[1]/div[3]/label[1]/textnode[1]': outline: expected="java.awt.Rectangle[x=0,y=0,width=-198,height=-8]", actual="java.awt.Rectangle[x=0,y=0,width=-358,height=-8]" a (sign_up_here) at 'html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/form[1]/div[4]/p[1]/a[1]': outline: expected="java.awt.Rectangle[x=190,y=3,width=-230,height=-5]", actual="java.awt.Rectangle[x=269,y=1,width=-386,height=-3]" label (label-2) at 'html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/form[1]/div[1]/label[1]': outline: expected="java.awt.Rectangle[x=0,y=0,width=-233,height=-46]", actual="java.awt.Rectangle[x=0,y=0,width=-388,height=-46]" button (sign_in) at 'html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/form[1]/button[1]': background-color: expected="rgb(40, 167, 69)", actual="rgb(33, 136, 56)" a (a) at 'html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/a[1]': outline: expected="java.awt.Rectangle[x=111,y=10,width=-222,height=-21]", actual="java.awt.Rectangle[x=190,y=7,width=-380,height=-19]" head (head) at 'html[1]/head[1]': outline: expected="java.awt.Rectangle[x=0,y=0,width=-412,height=-524]", actual="java.awt.Rectangle[x=0,y=0,width=-1034,height=-492]" at de.retest.recheck.RecheckImpl.capTest(RecheckImpl.java:189) at com.internetapp.pages.DBLoginPage.navigateUpdated(DBLoginPage.java:94) at com.internetapp.stepDefs.DemoLatestStepDefs.lambda$new$1(DemoLatestStepDefs.java:39) at ?.Access the URL in the "desktop-web"(file:///D:/workspace/UnifiedFramework5/UnifiedFramework_RecheckWeb/./src/test/resources/features/DemoAllinOne.feature:5) 
+          </div>
+          <br>
+         </div>
+        </div>
+        <div id="skip" class="orangered box padding-logs">
+         And Enter the User Credentials and Signin as Maveric Systems<a style="font-size:13px;vertical-align:2px;" id="step12_skipped_01955396442" href="javascript:toggle('step12_skipped1955396442','step12_skipped_01955396442');"> [+]</a>
+         <div id="step12_skipped1955396442" style="display: none; background-color: #FF4500; margin-left: 0.5cm; ">
+          <div class="messages"></div>
+         </div>
+        </div>
+        <div id="skip" class="orangered box padding-logs">
+         Then Check the balance of Source Checking Account<a style="font-size:13px;vertical-align:2px;" id="step13_skipped_01955396443" href="javascript:toggle('step13_skipped1955396443','step13_skipped_01955396443');"> [+]</a>
+         <div id="step13_skipped1955396443" style="display: none; background-color: #FF4500; margin-left: 0.5cm; ">
+          <div class="messages"></div>
+         </div>
+        </div>
+        <div id="skip" class="orangered box padding-logs">
+         When Perform Transfer between two Savings Account<a style="font-size:13px;vertical-align:2px;" id="step14_skipped_01955396454" href="javascript:toggle('step14_skipped1955396454','step14_skipped_01955396454');"> [+]</a>
+         <div id="step14_skipped1955396454" style="display: none; background-color: #FF4500; margin-left: 0.5cm; ">
+          <div class="messages"></div>
+         </div>
+        </div>
+        <div id="skip" class="orangered box padding-logs">
+         Given Access the URL in the "mobile-web"<a style="font-size:13px;vertical-align:2px;" id="step15_skipped_01955396455" href="javascript:toggle('step15_skipped1955396455','step15_skipped_01955396455');"> [+]</a>
+         <div id="step15_skipped1955396455" style="display: none; background-color: #FF4500; margin-left: 0.5cm; ">
+          <div class="messages"></div>
+         </div>
+        </div>
+        <div id="skip" class="orangered box padding-logs">
+         When Enter the User Credentials and Signin as JohnSmith<a style="font-size:13px;vertical-align:2px;" id="step16_skipped_01955396456" href="javascript:toggle('step16_skipped1955396456','step16_skipped_01955396456');"> [+]</a>
+         <div id="step16_skipped1955396456" style="display: none; background-color: #FF4500; margin-left: 0.5cm; ">
+          <div class="messages"></div>
+         </div>
+        </div>
+        <div id="skip" class="orangered box padding-logs">
+         Then Verify the transaction status in JohnSmith Account<a style="font-size:13px;vertical-align:2px;" id="step17_skipped_01955396457" href="javascript:toggle('step17_skipped1955396457','step17_skipped_01955396457');"> [+]</a>
+         <div id="step17_skipped1955396457" style="display: none; background-color: #FF4500; margin-left: 0.5cm; ">
+          <div class="messages"></div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div id="fail" class="red box padding-logs">
+      Scenario : TC002_Transfer the Salary amount to the Employee Account&nbsp;<a style="font-size:13px;vertical-align:2px;" id="TC002_Transfer the Salary amount to the Employee Account_failed_119553964616" href="javascript:toggle('TC002_Transfer the Salary amount to the Employee Account_failed_19553964616','TC002_Transfer the Salary amount to the Employee Account_failed_119553964616');"> [+]</a>
+      <div id="TC002_Transfer the Salary amount to the Employee Account_failed_19553964616" style="display: none; background-color: rgb(255, 218, 204); margin-left: 0.5cm;">
+       <div class="messages">
+        <div id="fail" class="red box padding-logs">
+         Given Access the URL in the "desktop-web"<a style="font-size:13px;vertical-align:2px;" id="step21_failed_01955396459" href="javascript:toggle('step21_failed1955396459','step21_failed_01955396459');"> [+]</a>
+         <div id="step21_failed1955396459" style="display: none; background-color: rgb(255, 218, 204);; margin-left: 0.5cm; ">
+          <div class="messages">
+           org.openqa.selenium.WebDriverException: chrome not reachable (Session info: chrome=84.0.4147.105) Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03' System info: host: 'MDLT011', ip: '192.168.43.3', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_231' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.105, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\DAISYM~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54149}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true} Session ID: 94a14d88aa506512512d03cad4007251 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) at java.lang.reflect.Constructor.newInstance(Constructor.java:423) at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187) at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122) at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49) at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158) at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83) at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552) at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:489) at de.retest.web.selenium.UnbreakableDriver.executeScript(UnbreakableDriver.java:234) at de.retest.web.RecheckSeleniumAdapter.convert(RecheckSeleniumAdapter.java:122) at de.retest.web.RecheckSeleniumAdapter.convertWebDriver(RecheckSeleniumAdapter.java:107) at de.retest.web.RecheckSeleniumAdapter.convert(RecheckSeleniumAdapter.java:94) at de.retest.recheck.persistence.RecheckSutState.convert(RecheckSutState.java:24) at de.retest.recheck.RecheckImpl.createActionReplayResult(RecheckImpl.java:128) at de.retest.recheck.RecheckImpl.check(RecheckImpl.java:117) at de.retest.web.RecheckWebImpl.check(RecheckWebImpl.java:32) at de.retest.recheck.RecheckImpl.check(RecheckImpl.java:107) at de.retest.web.RecheckWebImpl.check(RecheckWebImpl.java:40) at de.retest.web.selenium.AutocheckingRecheckDriver.check(AutocheckingRecheckDriver.java:157) at de.retest.web.selenium.AutocheckingNavigationWrapper.to(AutocheckingNavigationWrapper.java:33) at com.internetapp.pages.DBLoginPage.navigateUpdated(DBLoginPage.java:92) at com.internetapp.stepDefs.DemoLatestStepDefs.lambda$new$1(DemoLatestStepDefs.java:39) at ?.Access the URL in the "desktop-web"(file:///D:/workspace/UnifiedFramework5/UnifiedFramework_RecheckWeb/./src/test/resources/features/DemoAllinOne.feature:5) 
+          </div>
+          <br>
+         </div>
+        </div>
+        <div id="skip" class="orangered box padding-logs">
+         And Enter the User Credentials and Signin as Maveric Systems<a style="font-size:13px;vertical-align:2px;" id="step22_skipped_019553964510" href="javascript:toggle('step22_skipped19553964510','step22_skipped_019553964510');"> [+]</a>
+         <div id="step22_skipped19553964510" style="display: none; background-color: #FF4500; margin-left: 0.5cm; ">
+          <div class="messages"></div>
+         </div>
+        </div>
+        <div id="skip" class="orangered box padding-logs">
+         Then Check the balance of Source Checking Account<a style="font-size:13px;vertical-align:2px;" id="step23_skipped_019553964611" href="javascript:toggle('step23_skipped19553964611','step23_skipped_019553964611');"> [+]</a>
+         <div id="step23_skipped19553964611" style="display: none; background-color: #FF4500; margin-left: 0.5cm; ">
+          <div class="messages"></div>
+         </div>
+        </div>
+        <div id="skip" class="orangered box padding-logs">
+         When Perform Transfer between two Savings Account<a style="font-size:13px;vertical-align:2px;" id="step24_skipped_019553964612" href="javascript:toggle('step24_skipped19553964612','step24_skipped_019553964612');"> [+]</a>
+         <div id="step24_skipped19553964612" style="display: none; background-color: #FF4500; margin-left: 0.5cm; ">
+          <div class="messages"></div>
+         </div>
+        </div>
+        <div id="skip" class="orangered box padding-logs">
+         Given Access the URL in the "mobile-web"<a style="font-size:13px;vertical-align:2px;" id="step25_skipped_019553964613" href="javascript:toggle('step25_skipped19553964613','step25_skipped_019553964613');"> [+]</a>
+         <div id="step25_skipped19553964613" style="display: none; background-color: #FF4500; margin-left: 0.5cm; ">
+          <div class="messages"></div>
+         </div>
+        </div>
+        <div id="skip" class="orangered box padding-logs">
+         When Enter the User Credentials and Signin as JohnSmith<a style="font-size:13px;vertical-align:2px;" id="step26_skipped_019553964614" href="javascript:toggle('step26_skipped19553964614','step26_skipped_019553964614');"> [+]</a>
+         <div id="step26_skipped19553964614" style="display: none; background-color: #FF4500; margin-left: 0.5cm; ">
+          <div class="messages"></div>
+         </div>
+        </div>
+        <div id="skip" class="orangered box padding-logs">
+         Then Verify the transaction status in JohnSmith Account<a style="font-size:13px;vertical-align:2px;" id="step27_skipped_019553964615" href="javascript:toggle('step27_skipped19553964615','step27_skipped_019553964615');"> [+]</a>
+         <div id="step27_skipped19553964615" style="display: none; background-color: #FF4500; margin-left: 0.5cm; ">
+          <div class="messages"></div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

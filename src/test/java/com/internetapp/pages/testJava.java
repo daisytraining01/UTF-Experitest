@@ -1,18 +1,21 @@
 /*package com.internetapp.pages;
 
+import java.io.File;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+
+import com.maveric.core.driver.Driver;
+
 public class testJava {
 
 	public static void main(String[] args) {
-		
-		driver = new ChromeDriver();
-		
-		
-		driver.navigate ("https://demoqa.com/browser-windows");	
-		
-		
-		process = Runtime.getRuntime().exec(new String[]{"script_python","arg1", driver});
-        mProcess = process;
-		
+		 TakesScreenshot driver = Driver.getWebDriver();
+		 
+		 
+		 
+		File screenshotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(screenshotFile, new File("D:\\SoftwareTestingMaterial.png"));
 		
 	}
 

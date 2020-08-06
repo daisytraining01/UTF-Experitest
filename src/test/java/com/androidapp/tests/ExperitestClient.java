@@ -1,21 +1,20 @@
 package com.androidapp.tests;
 
  
-	import io.appium.java_client.ios.IOSDriver;
-	import io.appium.java_client.ios.IOSElement;
-	import io.appium.java_client.remote.IOSMobileCapabilityType;
-	import io.appium.java_client.remote.MobileCapabilityType;
-	import org.testng.annotations.*;
+
+import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.ios.IOSElement;
+import io.appium.java_client.remote.IOSMobileCapabilityType;
+import io.appium.java_client.remote.MobileCapabilityType;
+import org.testng.annotations.*;
 
 import com.maveric.core.testng.BaseTest;
 
 import org.openqa.selenium.By;
-	import org.openqa.selenium.ScreenOrientation;
-	import org.openqa.selenium.remote.DesiredCapabilities;
-
-	import java.net.MalformedURLException;
-	import java.net.URL;
-import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.ScreenOrientation;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 	public class ExperitestClient extends BaseTest{
 
@@ -28,16 +27,17 @@ import java.util.concurrent.TimeUnit;
 	        dc.setCapability("testName", "Quick Start iOS Native Demo");
 	        dc.setCapability("accessKey", accessKey);
 	        dc.setCapability("deviceQuery", "@os='ios' and @category='PHONE'");
+	        
 	        dc.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank");
 	        dc.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBank");
 	        driver = new IOSDriver<>(new URL("https://demo.experitest.com/wd/hub"), dc);
-	        System.out.println("IOS IS SET");
+	        System.out.println("iOS IS SET");
 	    }
 
 	    @Test
 	    public void quickStartiOSNativeDemo() {
 	    	
-	    	System.out.println("### Entering Test #####");
+	    	System.out.println("### Entering iOS Test #####");
 	    	 driver.rotate(ScreenOrientation.PORTRAIT);
 	         driver.findElement(By.xpath("//*[@id='usernameTextField']")).sendKeys("company");
 	         driver.hideKeyboard();
